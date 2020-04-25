@@ -4,11 +4,21 @@ let attendeesArray = [];
 let fileUploaded;
 
 function handleFiles(files){
+    
     if(window.handleFiles){
         getAsText(files[0]);
         fileUploaded = true;
     }else{
         alert('Filereader not supported in this browser.');
+    }
+}
+
+checkfile(sender){
+    var validExts = new Array('.xlsx', '.xls', '.csv');
+    var fileExt = sender.value;
+    fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+    if(validExts.indexOf(fileExt) < 0){
+        alert('not a valid file type')
     }
 }
 
