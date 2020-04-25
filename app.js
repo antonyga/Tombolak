@@ -1,6 +1,7 @@
 
 
 let attendeesArray = [];
+let fileUploaded;
 
 function handleFiles(files){
     if(window.handleFiles){
@@ -13,11 +14,14 @@ function handleFiles(files){
 
 function getAsText(fileToRead){
     var reader = new FileReader();
+    
+    // Read the file into memory as UFT-8
+    reader.readAsText(fileToRead);
+
     // Handle load errors
     reader.onload = loadHandler;
     reader.onerror = errorHandler;
-    // Read the file into memory as UFT-8
-    reader.readAsText(fileToRead);
+    
 }
 
 function loadHandler(event){
@@ -34,7 +38,7 @@ function processData(csv){
 
 function errorHandler(evt) {
 	if(evt.target.error.name == "NotReadableError") {
-		alert("Cannot read file !");
+		alert("Cannot read file!");
 	}
 }
 
@@ -51,16 +55,15 @@ const randomizerWinner = ()=>{
     // This line below chose a random number between 0 and 9.
     let winnerIndex = Math.floor(Math.random() * (max - min));
     
-    // in the line below we set the choosen number to an item position in the array attendeesArray.
+    // in the line below we set the choosen number to item position in the array attendeesArray.
     // Lets say the array contains 3 items ('Mary', 'Sussy', 'Pedro'). If the chosen number is 0
     // the variable winner will be set to 'Mary'.
     let winner = attendeesArray[winnerIndex];
+    
     console.log(winner);
     
-
-    task.textContent = winner;
-
-
-    
+    task.textContent = winner;    
 }
+
+// The button that triggers the randomizerWinner function.
 document.querySelector('.randomBtn button').addEventListener('click', randomizerWinner);
