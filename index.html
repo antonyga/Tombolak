@@ -9,22 +9,25 @@
 <body>
     <section>
         <div class="mainTitle">
-            <h1>Please click on Generate button to see your next task...</h1>
+            <h1>Upload your task list and click on Generate button to see your next task...</h1>
         </div>
-        <fieldset>
-            <label for="csvFileInput" <strong>CSV File:</strong>
-            </label>
-            <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"accept=".csv">
-        </fieldset>
+        <div class="inputRegion">
+
+            <fieldset>
+                <label for="csvFileInput" <strong>CSV File:</strong>
+                </label>
+                <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"accept=".csv">
+            </fieldset>
+        
+        </div>
         <div class="task">
-            <p>Something intersting is comming...</p>
+            <p>Something exciting is comming...</p>
         </div>
 
         <div class="randomBtn">
             <button id="rndBtn">Generate</button>
         </div>        
     </section>
-    <script src="app.js"></script>
-    
+    <script src="app.js"></script>    
 </body>
 </html>

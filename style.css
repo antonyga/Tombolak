@@ -20,6 +20,7 @@ section{
     color: rgb(236, 236, 236);
     font-size: 50px;
     padding-top: 20px;
+    padding-bottom: 120px;
     transition: opacity 0.5s ease;
 }
 
@@ -28,8 +29,8 @@ section{
     justify-content: space-around;
     display: flex;
     color: rgb(236, 236, 236);
-    font-size: 120px;
-    padding-top: 250px;
+    font-size: 50px;
+    padding-top: 110px;
     padding-bottom: 80px;
     transition: opacity 0.5s ease;
 }
@@ -46,5 +47,12 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-around;    
+}
+
+.inputRegion fieldset{
+   font-size: 15px; 
+   color: rgb(236, 236, 236);
+   align-items: center;
+   justify-content: space-around;
 }
 
