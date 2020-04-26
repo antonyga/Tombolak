@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Let's color our section */
-
 section{
     height: 100vh;
     background-color: rgb(39, 41, 120);
@@ -30,7 +28,7 @@ section{
     justify-content: space-around;
     display: flex;
     color: rgb(236, 236, 236);
-    font-size: 30px;
+    font-size: 120px;
     padding-top: 250px;
     padding-bottom: 80px;
     transition: opacity 0.5s ease;
